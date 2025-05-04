@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { FaChess, FaYoutube } from 'react-icons/fa';
