@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
-import { FaChess, FaYoutube } from 'react-icons/fa';
+import { FaChess, FaEnvelope, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import chesscomLogo from '@/assets/chesscomlogo.webp';
 import SamayBM from '@/assets/SamayBM.webp';
@@ -99,6 +100,19 @@ export default function ThankYouPage() {
                   </a>
                 </Button>
               </div>
+
+              <Button
+                asChild
+                className="bg-white hover:bg-white/90 text-black rounded-md py-3 text-base font-medium shadow-md"
+              >
+                <Link
+                  to="/subscribe"
+                  className="flex items-center justify-center gap-2"
+                >
+                  <FaEnvelope />
+                  Get updates from Samay
+                </Link>
+              </Button>
             </div>
 
             {/* Footer */}

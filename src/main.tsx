@@ -25,6 +25,7 @@ import Learn from './pages/Learn.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
 import SignUpCallback from './pages/SignUpCallback.tsx';
 import Blunder from './pages/SomethingWentWrong.tsx';
+import Subscribe from './pages/Subscribe.tsx';
 import ThankYouPage from './pages/ThankYou.tsx';
 import Welcome from './pages/Welcome.tsx';
 
@@ -43,6 +44,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
               <Route path="/chessnews" element={<ChessNews />} />
               <Route path="/chesstutorials" element={<ChessTutorials />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/subscribe" element={<Subscribe />} />
               <Route path="/welcome" element={<Welcome />} />
               <Route path="/community" element={<Community />} />
               <Route path="/signupcallback" element={<SignUpCallback />} />
