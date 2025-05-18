@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
