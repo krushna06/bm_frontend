@@ -57,9 +57,6 @@ export default function ThankYouPage() {
               </p>
 
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
-                  Our Journey
-                </h2>
                 <p className="text-base sm:text-lg text-white/80 mb-4">
                   This project is paused, but it was truly great while it
                   lasted. We'll be back with something bigger and better!
