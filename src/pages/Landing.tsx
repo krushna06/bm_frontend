@@ -12,7 +12,7 @@ import samayheader from '../assets/samayheader.webp';
 import chesscomLogo from '../assets/chesscomlogo.webp';
 import { Helmet } from 'react-helmet-async';
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-
+//
 const Counter = ({ end, duration = 2 }: { end: number; duration?: number }) => {
 	const count = useMotionValue(0);
 	const rounded = useTransform(count, latest => Math.round(latest));
@@ -303,92 +303,93 @@ const Footer = () => (
 );
 
 export function LandingPage() {
-	return (
-		<div className="relative bg-black min-h-screen text-white flex flex-col overflow-x-hidden">
-			<Helmet>
-				<title>BM Samay Raina - India's Biggest Chess Community</title>
-				<meta name="description" content="Join BM Samay Raina's ultimate chess community. Connect, compete, and climb the ranks with India's biggest chess streamer and comedian." />
-				<meta name="keywords" content="Samay Raina, chess, community, BM Samay, Indian chess, chess streamer" />
-				<meta property="og:title" content="BM Samay Raina - India's Biggest Chess Community" />
-				<meta property="og:description" content="Join BM Samay Raina's ultimate chess community. Connect, compete, and climb the ranks with India's biggest chess streamer and comedian." />
-				<meta property="og:image" content="/SamayBM.png" />
-				<meta property="og:url" content="https://bmsamay.com" />
-				<meta name="twitter:card" content="summary_large_image" />
-			</Helmet>
-			<div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a1f0a] to-[#1a3a1a] z-0">
-				<div className="absolute inset-0 opacity-20 bg-[url('/chess-pattern.svg')] bg-repeat"></div>
-			</div>
+  return (
+    <div className="relative bg-black min-h-screen text-white flex flex-col overflow-x-hidden">
+      <Helmet>
+        <title>BM Samay Raina - India's Biggest Chess Community</title>
+        <meta name="description" content="Join BM Samay Raina's ultimate chess community. Connect, compete, and climb the ranks with India's biggest chess streamer and comedian." />
+        <meta name="keywords" content="Samay Raina, chess, community, BM Samay, Indian chess, chess streamer" />
+        <meta property="og:title" content="BM Samay Raina - India's Biggest Chess Community" />
+        <meta property="og:description" content="Join BM Samay Raina's ultimate chess community. Connect, compete, and climb the ranks with India's biggest chess streamer and comedian." />
+        <meta property="og:image" content="/SamayBM.png" />
+        <meta property="og:url" content="https://bmsamay.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a1f0a] to-[#1a3a1a] z-0">
+        <div className="absolute inset-0 opacity-20 bg-[url('/chess-pattern.svg')] bg-repeat"></div>
+      </div>
 
-			{/* Depth elements */}
-			<div className="absolute top-20 -left-20 w-64 h-64 bg-neon-green opacity-10 rounded-full filter blur-3xl"></div>
-			<div className="absolute bottom-20 -right-20 w-80 h-80 bg-neon-green opacity-10 rounded-full filter blur-3xl"></div>
+      {/* Depth elements */}
+      <div className="absolute top-20 -left-20 w-64 h-64 bg-neon-green opacity-10 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-20 -right-20 w-80 h-80 bg-neon-green opacity-10 rounded-full filter blur-3xl"></div>
 
-			{/* Content */}
-			<Navbar />
-			<main className="flex-grow px-4 sm:px-6 py-24 mt-15 relative z-10">
-				<div className="max-w-7xl mx-auto">
-					<div className="mb-48">
-						<Hero />
-						<Partner />
-					</div>
-					<motion.div
-						initial={{ opacity: 0, y: 50 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.2 }}
-						className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-24 mt-16 md:mt-32"
-					>
-						<Leaderboard />
-						<Features />
-					</motion.div>
-					<HowItWorks />
-					<CommunityFeatures />
-				</div>
-			</main>
-			<Footer />
-		</div>
-	);
+      {/* Content */}
+      <Navbar />
+      <main className="flex-grow px-4 sm:px-6 py-24 mt-15 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-48">
+            <Hero />
+            <Partner />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-24 mt-16 md:mt-32"
+          >
+            <Leaderboard />
+            <Features />
+          </motion.div>
+          <HowItWorks />
+          <CommunityFeatures />
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
 function ChartIcon(props: React.SVGProps<SVGSVGElement>) {
-	return (
-		<svg
-			{...props}
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		>
-			<path d="M3 3v18h18" />
-			<path d="M18 17V9" />
-			<path d="M13 17V5" />
-			<path d="M8 17v-3" />
-		</svg>
-	)
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 3v18h18" />
+      <path d="M18 17V9" />
+      <path d="M13 17V5" />
+      <path d="M8 17v-3" />
+    </svg>
+  )
 }
 
 function PredictIcon(props: React.SVGProps<SVGSVGElement>) {
-	return (
-		<svg
-			{...props}
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		>
-			<path d="M2 12h10" />
-			<path d="M9 4v16" />
-			<path d="m3 9 3 3-3 3" />
-			<path d="M14 8V6c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2" />
-		</svg>
-	)
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M2 12h10" />
+      <path d="M9 4v16" />
+      <path d="m3 9 3 3-3 3" />
+      <path d="M14 8V6c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2" />
+    </svg>
+  )
 }
